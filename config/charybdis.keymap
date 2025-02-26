@@ -1,5 +1,3 @@
-#include <behaviors/mouse_keys.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -8,18 +6,79 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define U_TAPPING_TERM 200
-
 / {
-    chosen { zmk,matrix_transform = &default_transform; };
-};
+    /* input config for mouse move mode */
+    trackball_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <0 1 2 3>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <4>;
+        scale-divisor = <5>;
+        // bindings = <&ib_toggle_layer 7>;
+    };
 
-/ {
+    /* input config for snipe mode */
+    trackball_snipe_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <4>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+        scale-divisor = <6>;
+    };
+
+    /* input config for mouse scroll mode */
+    trackball_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <5>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        y-invert;
+        bindings = <&ib_wheel_scaler 1 14>;
+    };
+
+    /* define a resolution down scaler only for INPUT_REL_WHEEL */
+    ib_wheel_scaler: ib_wheel_scaler {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_WHEEL>;
+    };
+
+    /* adjust cooldown waiting period for mouse key layer after activated */
+    ib_toggle_layer: ib_toggle_layer {
+        compatible = "zmk,input-behavior-tog-layer";
+        #binding-cells = <1>;
+        time-to-live-ms = <750>;
+    };
+// ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
+//    00     01     02     03    04      05        06     07     08     09     10     11
+// ├──────┼──────┼──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┼──────┼──────┼──────┤
+//    12     13     14     15    16      17        18     19     20     21     22     23
+// ├──────┼──────┼──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┼──────┼──────┼──────┤
+//    24     25     26     27    28      29        30     31     32     33     34     35
+// ╰──────┴──────┴──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┴──────┴──────┴──────╯
+//                         36     37     38        39     40
+//                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
+// #define BASE    0
+// #define NUM     1
+// #define NAV     2
+// #define MOUSE   3
+// #define SLOW    4
+// #define SCROLL  5
+
     combos {
         compatible = "zmk,combos";
 
         ScrollLayer {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <32 33>;
         };
 
@@ -121,17 +180,16 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         BASE {
-            bindings = <
+         bindings = <
 &kp TAB         &kp Q                &kp W  &kp E     &kp R        &kp T    &kp Y        &kp U            &kp I      &kp O    &kp P                    &kp LEFT_BRACKET
 &kp ESCAPE      &hml LEFT_CONTROL A  &kp S  &kp D     &kp F        &kp G    &kp H        &hmr LEFT_ALT J  &kp K      &kp L    &hmr RIGHT_CONTROL SEMI  &kp APOS
 &kp LEFT_SHIFT  &kp Z                &kp X  &kp C     &kp V        &kp B    &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH                 &kp RIGHT_SHIFT
-                                            &kp LGUI  &lt 2 SPACE  &mo 1    &lt 2 SPACE  &mo 1
-            >;
-        };
+                                         &kp LGUI  &lt 2 SPACE  &mo 1    &lt 2 SPACE  &mo 1
+         >;
+     };
 
-        VIM {
+        NAV {
             bindings = <
 &kp TAB         &kp LA(INSERT)    &kp LC(RIGHT)  &none          &none         &bt BT_CLR      &kp LC(C)   &kp LC(Z)  &none         &none      &kp LC(V)          &none
 &kp ESCAPE      &kp LEFT_CONTROL  &kp LC(LEFT)   &kp LC(RIGHT)  &kp HOME      &kp END         &kp LEFT    &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp RIGHT_CONTROL  &none
@@ -140,7 +198,7 @@
             >;
         };
 
-        SYMNUM {
+        NUM {
             bindings = <
 &kp GRAVE       &kp EXCL          &kp AT             &kp HASH              &kp DLLR               &kp PRCNT        &none      &kp N7  &kp N8  &kp N9  &kp MINUS      &kp RIGHT_BRACKET
 &kp CAPSLOCK    &none             &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET        &kp UNDER  &kp N4  &kp N5  &kp N6  &kp PLUS       &kp EQUAL
@@ -149,33 +207,31 @@
             >;
         };
 
-        AUTO-MOUSE {
+        MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK  &mkp RCLK  &mo 4   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK  &mkp RCLK  &mo 4   &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
+&none    &msc MOVE_LEFT  &msc MOVE_UP    &mmv MOVE_UP    &msc MOVE_DOWN   &msc MOVE_RIGHT    &none  &none            &none      &none         &none          &none
+&kp TAB  &mkp MB4        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5           &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp LEFT_ALT  &kp LCMD  &none
+&none    &kp C_AC_UNDO   &kp C_AC_CUT    &kp C_AC_COPY   &kp C_AC_PASTE   &mkp MCLK          &none  &none            &none      &none         &none          &none
+                                         &trans          &trans           &trans             &kp RETURN              &trans
+            >;
+        };
+
+        SLOW {
+            bindings = <
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                              &trans    &trans    &trans    &trans    &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-            >;
-        };
-
-        snipe_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                              &trans    &trans    &trans    &trans    &trans
             >;
         };
     };
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
