@@ -6,6 +6,8 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define U_TAPPING_TERM 200
+
 / {
     /* input config for mouse move mode */
     trackball_listener {
