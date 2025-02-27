@@ -43,7 +43,7 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 14>;
+        bindings = <&ib_hwheel_scaler 1 14>, <&ib_wheel_scaler 1 14>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
@@ -52,6 +52,14 @@
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
+    };
+
+    /* define a resolution down scaler for INPUT_REL_HWHEEL (horizontal scroll) */
+    ib_hwheel_scaler: ib_hwheel_scaler {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;  // Allows you to pass parameters (multiplier and divisor)
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_HWHEEL>;  // Apply this scaler to horizontal scroll events
     };
 
     /* adjust cooldown waiting period for mouse key layer after activated */
