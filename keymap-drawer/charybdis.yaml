@@ -78,11 +78,11 @@ layers:
   - ''
   - ''
   - RIGHT SHIFT
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
+  - VOLUME DOWN
+  - PLAY PAUSE
+  - {t: VOLUME UP, type: held}
+  - PREVIOUS
+  - NEXT
   NUM:
   - '`'
   - '!'
