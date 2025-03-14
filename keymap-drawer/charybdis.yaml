@@ -19,7 +19,7 @@ layers:
   - F
   - G
   - H
-  - {t: J, h: LEFT ALT}
+  - J
   - K
   - L
   - {t: ;, h: RIGHT CONTROL}
@@ -31,7 +31,7 @@ layers:
   - V
   - B
   - N
-  - M
+  - {t: M, h: LEFT ALT}
   - ','
   - .
   - /
