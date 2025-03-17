@@ -221,7 +221,7 @@
 &kp GRAVE       &kp EXCL          &kp AT             &kp HASH              &kp DLLR               &kp PRCNT        &none      &kp N7  &kp N8  &kp N9  &kp MINUS      &kp RIGHT_BRACKET
 &kp CAPSLOCK    &none             &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET        &kp UNDER  &kp N4  &kp N5  &kp N6  &kp PLUS       &kp EQUAL
 &kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp PIPE   &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &kp RIGHT_SHIFT
-                                                     &none                 &none                  &none            &kp N0     &none
+                                                     &kp C_VOL_DN          &kp C_PLAY_PAUSE       &kp C_VOL_UP     &kp N0     &none
             >;
         };
 

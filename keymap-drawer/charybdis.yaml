@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
   - TAB
@@ -120,9 +121,9 @@ layers:
   - '3'
   - \
   - RIGHT SHIFT
-  - ''
-  - {type: held}
-  - ''
+  - VOL DN
+  - {t: PLAY PAUSE, type: held}
+  - VOL UP
   - '0'
   - ''
   MOUSE:
