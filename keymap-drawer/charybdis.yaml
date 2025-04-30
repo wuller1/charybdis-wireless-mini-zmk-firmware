@@ -38,10 +38,10 @@ layers:
   - /
   - RIGHT SHIFT
   - LGUI
-  - {t: SPACE, h: NUM}
-  - NAV
-  - {t: SPACE, h: NUM}
-  - NAV
+  - {t: SPACE, h: NAV}
+  - NUM
+  - {t: SPACE, h: NAV}
+  - NUM
   NAV:
   - TAB
   - Alt+ INSERT
@@ -80,8 +80,8 @@ layers:
   - ''
   - RIGHT SHIFT
   - VOLUME DOWN
-  - PLAY PAUSE
-  - {t: VOLUME UP, type: held}
+  - {t: PLAY PAUSE, type: held}
+  - VOLUME UP
   - PREVIOUS
   - NEXT
   NUM:
@@ -122,8 +122,8 @@ layers:
   - \
   - RIGHT SHIFT
   - VOL DN
-  - {t: PLAY PAUSE, type: held}
-  - VOL UP
+  - PLAY PAUSE
+  - {t: VOL UP, type: held}
   - '0'
   - ''
   MOUSE:
