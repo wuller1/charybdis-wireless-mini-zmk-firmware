@@ -99,24 +99,9 @@
             key-positions = <32 33>;
         };
 
-        LeftClck {
-            bindings = <&mkp LCLK>;
-            key-positions = <32 31>;
-        };
-
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <8 9>;
-        };
-
-        bootloader_left {
-            bindings = <&bootloader>;
-            key-positions = <24 38>;
-        };
-
-        bootloader_right {
-            bindings = <&bootloader>;
-            key-positions = <35 40>;
         };
 
         backspace {
@@ -144,14 +129,14 @@
             key-positions = <21 22>;
         };
 
-        layer_2 {
-            bindings = <&mo 2>;
-            key-positions = <15 16>;
-        };
-
         win {
             bindings = <&kp LEFT_WIN>;
             key-positions = <31 32>;
+        };
+
+        insert {
+            bindings = <&kp INSERT>;
+            key-positions = <33 34>;
         };
     };
 
