@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - LGUI
+  - NUM
   - {t: SPACE, h: NAV}
   - NUM
   - {t: SPACE, h: NAV}
@@ -121,9 +121,9 @@ layers:
   - '3'
   - \
   - RIGHT SHIFT
-  - VOL DN
+  - {t: VOL DN, type: held}
   - PLAY PAUSE
-  - {t: VOL UP, type: held}
+  - VOL UP
   - '0'
   - ''
   MOUSE:
@@ -275,3 +275,5 @@ combos:
   k: Mid CLK
 - p: [15, 16]
   k: NUM
+- p: [31, 32]
+  k: LEFT WIN
