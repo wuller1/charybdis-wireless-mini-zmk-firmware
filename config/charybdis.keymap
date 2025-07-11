@@ -96,46 +96,36 @@
 
         ScrollLayer {
             bindings = <&tog 5>;
-            key-positions = <32 33>;
+            key-positions = <44 45>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <8 9>;
+            key-positions = <20 21>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <2 3>;
+            key-positions = <14 15>;
         };
 
         LeftClick {
             bindings = <&mkp LCLK>;
-            key-positions = <19 20>;
+            key-positions = <31 32>;
         };
 
         RightClick {
             bindings = <&mkp RCLK>;
-            key-positions = <20 21>;
+            key-positions = <33 32>;
         };
 
         MiddleClick {
             bindings = <&mkp MCLK>;
-            key-positions = <21 22>;
-        };
-
-        win {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <31 32>;
-        };
-
-        insert {
-            bindings = <&kp INSERT>;
             key-positions = <33 34>;
         };
     };
@@ -195,11 +185,11 @@
 
         BASE {
             bindings = <
-&kp TILDE       &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5             &kp NUMBER_6     &kp N7  &kp N8     &kp N9   &kp N0                   &kp MINUS
-&kp TAB         &kp Q                &kp W         &kp E         &kp R         &kp T              &kp Y            &kp U   &kp I      &kp O    &kp P                    &kp LEFT_BRACKET
-&kp ESCAPE      &hml LEFT_CONTROL A  &kp S         &kp D         &kp F         &kp G              &kp H            &kp J   &kp K      &kp L    &hmr RIGHT_CONTROL SEMI  &kp APOS
-&kp LEFT_SHIFT  &kp Z                &kp X         &kp C         &lt 3 V       &hml LEFT_ALT B    &hmr LEFT_ALT N  &kp M   &kp COMMA  &kp DOT  &kp FSLH                 &kp RIGHT_SHIFT
-                &kp NUMBER_3         &kp NUMBER_2  &kp NUMBER_1  &kp N5        &kp NUMBER_4       &kp NUMBER_6             &kp N7     &kp N8
+&kp GRAVE       &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5             &kp NUMBER_6     &kp N7  &kp N8     &kp N9        &kp N0                   &kp MINUS
+&kp TAB         &kp Q                &kp W         &kp E         &kp R         &kp T              &kp Y            &kp U   &kp I      &kp O         &kp P                    &kp LEFT_BRACKET
+&kp ESCAPE      &hml LEFT_CONTROL A  &kp S         &kp D         &kp F         &kp G              &kp H            &kp J   &kp K      &kp L         &hmr RIGHT_CONTROL SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp Z                &kp X         &kp C         &lt 3 V       &hml LEFT_ALT B    &hmr LEFT_ALT N  &kp M   &kp COMMA  &kp DOT       &kp FSLH                 &kp RIGHT_SHIFT
+                &mo 2                &lt 1 SPACE   &kp LEFT_WIN  &kp HOME      &kp END            &lt 1 SPACE              &mo 2      &kp LEFT_ALT
             >;
         };
 
