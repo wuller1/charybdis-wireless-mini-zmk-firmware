@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - '~'
+  - '`'
   - '1'
   - '2'
   - '3'
@@ -49,14 +49,14 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - '3'
-  - '2'
-  - '1'
-  - '5'
-  - '4'
-  - '6'
-  - '7'
-  - '8'
+  - NUM
+  - {t: SPACE, h: NAV}
+  - LEFT WIN
+  - HOME
+  - END
+  - {t: SPACE, h: NAV}
+  - NUM
+  - LEFT ALT
   NAV:
   - ''
   - ''
@@ -107,6 +107,14 @@ layers:
   - ''
   - RIGHT SHIFT
   - ''
+  - {type: held}
+  - ''
+  - VOL DN
+  - VOLUME UP
+  - ''
+  - ''
+  - ''
+  NUM:
   - ''
   - ''
   - ''
@@ -114,8 +122,55 @@ layers:
   - ''
   - ''
   - ''
-  NUM: ['', '', '', '', '', '', '', '', '', '', '', '', '`', '!', '@', '#', $, '%', '', '7', '8', '9', '-', ']', CAPSLOCK, '', '*', (, ), ^, _, '4', '5', '6', +,
-    '=', LEFT SHIFT, '[', ']', '{', '}', '&', '|', '1', '2', '3', \, RIGHT SHIFT, '', '', '', '', '', '', '', '']
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '`'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - ']'
+  - CAPSLOCK
+  - ''
+  - '*'
+  - (
+  - )
+  - ^
+  - _
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - '='
+  - LEFT SHIFT
+  - '['
+  - ']'
+  - '{'
+  - '}'
+  - '&'
+  - '|'
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - RIGHT SHIFT
+  - {type: held}
+  - ''
+  - ''
+  - VOLUME DOWN
+  - VOLUME UP
+  - ''
+  - ''
+  - ''
   MOUSE:
   - ''
   - ''
@@ -288,21 +343,17 @@ layers:
   - ''
   - ''
 combos:
-- p: [32, 33]
+- p: [44, 45]
   k: {t: SCROLL, h: toggle}
-- p: [8, 9]
-  k: ENTER
-- p: [7, 8]
-  k: BACK SPACE
-- p: [2, 3]
-  k: DELETE
-- p: [19, 20]
-  k: L CLK
 - p: [20, 21]
-  k: R CLK
-- p: [21, 22]
-  k: Mid CLK
+  k: ENTER
+- p: [19, 20]
+  k: BACK SPACE
+- p: [14, 15]
+  k: DELETE
 - p: [31, 32]
-  k: LEFT WIN
+  k: L CLK
+- p: [33, 32]
+  k: R CLK
 - p: [33, 34]
-  k: INSERT
+  k: Mid CLK

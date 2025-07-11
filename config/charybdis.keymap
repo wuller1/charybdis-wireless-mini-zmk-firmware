@@ -195,21 +195,21 @@
 
         NAV {
             bindings = <
-&none           &none             &none          &none          &none         &none           &none       &none      &none         &none      &none              &none
-&kp TAB         &kp LA(INSERT)    &kp LC(RIGHT)  &none          &none         &bt BT_CLR      &kp LC(C)   &kp LC(Z)  &none         &none      &kp LC(V)          &none
-&kp ESCAPE      &kp LEFT_CONTROL  &kp LC(LEFT)   &kp LC(RIGHT)  &kp HOME      &kp END         &kp LEFT    &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp RIGHT_CONTROL  &none
-&kp LEFT_SHIFT  &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &kp LC(LEFT)    &bt BT_CLR  &none      &none         &none      &none              &kp RIGHT_SHIFT
-                &none             &none          &none          &none         &none           &none                  &none         &none
+&none           &none             &none          &none          &none         &none              &none       &none      &none         &none      &none              &none
+&kp TAB         &kp LA(INSERT)    &kp LC(RIGHT)  &none          &none         &bt BT_CLR         &kp LC(C)   &kp LC(Z)  &none         &none      &kp LC(V)          &none
+&kp ESCAPE      &kp LEFT_CONTROL  &kp LC(LEFT)   &kp LC(RIGHT)  &kp HOME      &kp END            &kp LEFT    &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp RIGHT_CONTROL  &none
+&kp LEFT_SHIFT  &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &kp LC(LEFT)       &bt BT_CLR  &none      &none         &none      &none              &kp RIGHT_SHIFT
+                &none             &none          &none          &kp C_VOL_DN  &kp C_VOLUME_UP    &none                  &none         &none
             >;
         };
 
         NUM {
             bindings = <
-&none           &none             &none              &none                 &none                  &none            &none      &none   &none   &none   &none          &none
-&kp GRAVE       &kp EXCL          &kp AT             &kp HASH              &kp DLLR               &kp PRCNT        &none      &kp N7  &kp N8  &kp N9  &kp MINUS      &kp RIGHT_BRACKET
-&kp CAPSLOCK    &none             &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET        &kp UNDER  &kp N4  &kp N5  &kp N6  &kp PLUS       &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp PIPE   &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &kp RIGHT_SHIFT
-                &none             &none              &none                 &none                  &none            &none              &none   &none
+&none           &none             &none              &none                 &none                  &none              &none      &none   &none   &none   &none          &none
+&kp GRAVE       &kp EXCL          &kp AT             &kp HASH              &kp DLLR               &kp PRCNT          &none      &kp N7  &kp N8  &kp N9  &kp MINUS      &kp RIGHT_BRACKET
+&kp CAPSLOCK    &none             &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET          &kp UNDER  &kp N4  &kp N5  &kp N6  &kp PLUS       &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND      &kp PIPE   &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &kp RIGHT_SHIFT
+                &none             &none              &none                 &kp C_VOLUME_DOWN      &kp C_VOLUME_UP    &none              &none   &none
             >;
         };
 
