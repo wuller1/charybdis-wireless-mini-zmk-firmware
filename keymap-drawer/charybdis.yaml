@@ -49,11 +49,14 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - NUM
-  - {t: SPACE, h: NAV}
-  - NUM
-  - {t: SPACE, h: NAV}
-  - NUM
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   NAV:
   - ''
   - ''
@@ -103,12 +106,6 @@ layers:
   - ''
   - ''
   - RIGHT SHIFT
-  - VOLUME DOWN
-  - {t: PLAY PAUSE, type: held}
-  - VOLUME UP
-  - PREVIOUS
-  - NEXT
-  NUM:
   - ''
   - ''
   - ''
@@ -117,51 +114,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '`'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ''
-  - '7'
-  - '8'
-  - '9'
-  - '-'
-  - ']'
-  - CAPSLOCK
-  - ''
-  - '*'
-  - (
-  - )
-  - ^
-  - _
-  - '4'
-  - '5'
-  - '6'
-  - +
-  - '='
-  - LEFT SHIFT
-  - '['
-  - ']'
-  - '{'
-  - '}'
-  - '&'
-  - '|'
-  - '1'
-  - '2'
-  - '3'
-  - \
-  - RIGHT SHIFT
-  - {t: VOL DN, type: held}
-  - PLAY PAUSE
-  - VOL UP
-  - '0'
-  - ''
+  NUM: ['', '', '', '', '', '', '', '', '', '', '', '', '`', '!', '@', '#', $, '%', '', '7', '8', '9', '-', ']', CAPSLOCK, '', '*', (, ), ^, _, '4', '5', '6', +,
+    '=', LEFT SHIFT, '[', ']', '{', '}', '&', '|', '1', '2', '3', \, RIGHT SHIFT, '', '', '', '', '', '', '', '']
   MOUSE:
   - ''
   - ''
@@ -215,7 +169,10 @@ layers:
   - ''
   - ''
   - ''
-  - INSERT
+  - ''
+  - ''
+  - ''
+  - ''
   SLOW:
   - ''
   - ''
@@ -265,11 +222,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   SCROLL:
   - ''
   - ''
@@ -319,11 +279,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
 combos:
 - p: [32, 33]
   k: {t: SCROLL, h: toggle}
