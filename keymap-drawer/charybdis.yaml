@@ -1,6 +1,18 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - TAB
   - Q
   - W
@@ -43,6 +55,18 @@ layers:
   - {t: SPACE, h: NAV}
   - NUM
   NAV:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - TAB
   - Alt+ INSERT
   - Ctl+ RIGHT
@@ -85,6 +109,18 @@ layers:
   - PREVIOUS
   - NEXT
   NUM:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - '`'
   - '!'
   - '@'
@@ -134,6 +170,18 @@ layers:
   - ''
   - ''
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - F7
   - F8
   - F9
@@ -169,6 +217,18 @@ layers:
   - ''
   - INSERT
   SLOW:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -211,6 +271,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SCROLL:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
