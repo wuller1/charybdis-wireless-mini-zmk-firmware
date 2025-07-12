@@ -168,9 +168,9 @@ layers:
   - INSERT
   - VOLUME DOWN
   - VOLUME UP
+  - '0'
   - ''
-  - ''
-  - ''
+  - LEFT ALT
   MOUSE:
   - ''
   - ''
