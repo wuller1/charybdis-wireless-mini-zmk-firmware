@@ -172,11 +172,11 @@
 
         BASE {
             bindings = <
-&kp GRAVE       &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &kp NUMBER_6  &kp N7  &kp N8     &kp N9        &kp N0                   &kp MINUS
-&kp TAB         &kp Q                &kp W         &kp E         &kp R         &kp T      &kp Y         &kp U   &kp I      &kp O         &kp P                    &kp LEFT_BRACKET
-&kp ESCAPE      &hml LEFT_CONTROL A  &kp S         &kp D         &kp F         &kp G      &kp H         &kp J   &kp K      &kp L         &hmr RIGHT_CONTROL SEMI  &kp APOS
-&kp LEFT_SHIFT  &kp Z                &kp X         &kp C         &kp V         &kp B      &kp N         &kp M   &kp COMMA  &kp DOT       &kp FSLH                 &kp RIGHT_SHIFT
-                &mo 2                &lt 1 SPACE   &kp LEFT_WIN  &kp HOME      &kp END    &lt 1 SPACE           &mo 2      &kp LEFT_ALT
+&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5              &kp NUMBER_6  &kp N7  &kp N8     &kp N9             &kp N0         &kp MINUS
+&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y         &kp U   &kp I      &kp O              &kp P          &kp LEFT_BRACKET
+&kp ESCAPE      &kp A         &kp S         &kp D         &kp F         &kp G               &kp H         &kp J   &kp K      &kp L              &kp SEMICOLON  &kp APOS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B               &kp N         &kp M   &kp COMMA  &kp DOT            &kp FSLH       &kp RIGHT_SHIFT
+                &mo 2         &lt 1 SPACE   &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL    &lt 1 SPACE           &mo 2      &kp RIGHT_CONTROL
             >;
         };
 

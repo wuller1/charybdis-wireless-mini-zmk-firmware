@@ -26,7 +26,7 @@ layers:
   - P
   - '['
   - ESCAPE
-  - {t: A, h: LEFT CONTROL}
+  - A
   - S
   - D
   - F
@@ -35,7 +35,7 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: RIGHT CONTROL}
+  - ;
   - ''''
   - LEFT SHIFT
   - Z
@@ -52,11 +52,11 @@ layers:
   - NUM
   - {t: SPACE, h: NAV}
   - LEFT WIN
-  - HOME
-  - END
+  - LEFT ALT
+  - LEFT CONTROL
   - {t: SPACE, h: NAV}
   - NUM
-  - LEFT ALT
+  - RIGHT CONTROL
   NAV:
   - ''
   - ''
