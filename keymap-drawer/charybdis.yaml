@@ -51,8 +51,8 @@ layers:
   - RIGHT SHIFT
   - NUM
   - {t: SPACE, h: NAV}
-  - LEFT WIN
-  - LEFT ALT
+  - RIGHT COMMAND
+  - LEFT COMMAND
   - LEFT CONTROL
   - {t: SPACE, h: NAV}
   - NUM
