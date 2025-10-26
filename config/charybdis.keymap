@@ -195,10 +195,10 @@
 
         BASE {
             bindings = <
-&kp TAB         &kp Q                &kp W  &kp E  &kp R        &kp T              &kp Y            &kp U  &kp I      &kp O    &kp P                    &kp LEFT_BRACKET
-&kp ESCAPE      &hml LEFT_CONTROL A  &kp S  &kp D  &kp F        &kp G              &kp H            &kp J  &kp K      &kp L    &hmr RIGHT_CONTROL SEMI  &kp APOS
-&kp LEFT_SHIFT  &kp Z                &kp X  &kp C  &lt 3 V      &hml LEFT_ALT B    &hmr LEFT_ALT N  &kp M  &kp COMMA  &kp DOT  &kp FSLH                 &kp RIGHT_SHIFT
-                                            &mo 2  &lt 1 SPACE  &mo 2              &lt 1 SPACE      &mo 2
+&kp TAB         &kp Q                &kp W  &kp E         &kp R        &kp T                  &kp Y                &kp U  &kp I      &kp O    &kp P                    &kp LEFT_BRACKET
+&kp ESCAPE      &hml LEFT_CONTROL A  &kp S  &kp D         &kp F        &kp G                  &kp H                &kp J  &kp K      &kp L    &hmr RIGHT_CONTROL SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp Z                &kp X  &kp C         &kp V        &hml LEFT_COMMAND B    &hmr LEFT_COMMAND N  &kp M  &kp COMMA  &kp DOT  &kp FSLH                 &kp RIGHT_SHIFT
+                                            &kp LEFT_WIN  &lt 1 SPACE  &mo 2                  &lt 1 SPACE          &mo 2
             >;
         };
 

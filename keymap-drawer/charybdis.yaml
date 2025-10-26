@@ -29,15 +29,15 @@ layers:
   - Z
   - X
   - C
-  - {t: V, h: MOUSE}
-  - {t: B, h: LEFT ALT}
-  - {t: N, h: LEFT ALT}
+  - V
+  - {t: B, h: LEFT COMMAND}
+  - {t: N, h: LEFT COMMAND}
   - M
   - ','
   - .
   - /
   - RIGHT SHIFT
-  - NUM
+  - LEFT WIN
   - {t: SPACE, h: NAV}
   - NUM
   - {t: SPACE, h: NAV}
@@ -121,9 +121,9 @@ layers:
   - '3'
   - \
   - RIGHT SHIFT
-  - {t: VOL DN, type: held}
+  - VOL DN
   - PLAY PAUSE
-  - VOL UP
+  - {t: VOL UP, type: held}
   - '0'
   - ''
   MOUSE:
@@ -155,7 +155,7 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - ''
   - ''
   - LEFT ALT
   - F1
